@@ -1,10 +1,12 @@
 package com.example.sonarqubesearch;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+//@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
@@ -25,20 +27,16 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUserByEmail(String email) {
         User user = userRepository.findByEmail(email);
-        if (email.equals("unknow")) {
-            // do something
-        } else {
-            // do something
-        }
         return user;
     }
 
     @Override
     public User saveUser(User user) {
-        User userDb = userRepository.findByEmail(user.getEmail());
-        if (userDb == null) {
-            return userRepository.save(user);
+        String pass = user.getPassword();
+        if ("".equals(pass)) {
+            user.setPassword("12345678");
         }
-        return userDb;
+        return userRepository.save(user);
     }
+
 }
