@@ -1,0 +1,5 @@
+com\example\sonarqubesearch\UserControllerTest.class
+com\example\sonarqubesearch\UserTest.class
+com\example\sonarqubesearch\UserServiceImplTest.class
+com\example\sonarqubesearch\UserRepositoryTest.class
+com\example\sonarqubesearch\SonarqubeSearchApplicationTest.class

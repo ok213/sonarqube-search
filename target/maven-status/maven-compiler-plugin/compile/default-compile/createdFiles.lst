@@ -1,0 +1,6 @@
+com\example\sonarqubesearch\UserService.class
+com\example\sonarqubesearch\UserServiceImpl.class
+com\example\sonarqubesearch\UserController.class
+com\example\sonarqubesearch\SonarqubeSearchApplication.class
+com\example\sonarqubesearch\User.class
+com\example\sonarqubesearch\UserRepository.class
